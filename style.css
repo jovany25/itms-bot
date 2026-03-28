@@ -2,19 +2,19 @@
    CSS Variables & Reset
    =========================== */
 :root {
-  --color-primary: #1a1a2e;
-  --color-accent: #c9a84c;
-  --color-accent-dark: #b08d3a;
-  --color-light: #f5f0eb;
+  --color-primary: #0a0a0a;
+  --color-accent: #c0192b;
+  --color-accent-dark: #9e1523;
+  --color-light: #f7f7f7;
   --color-white: #ffffff;
-  --color-text: #333333;
-  --color-text-light: #777777;
+  --color-text: #1a1a1a;
+  --color-text-light: #666666;
   --font-heading: 'Playfair Display', Georgia, serif;
   --font-body: 'Lato', 'Segoe UI', sans-serif;
   --transition: 0.3s ease;
-  --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  --shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.15);
-  --radius: 12px;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  --shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --radius: 8px;
 }
 
 *,
@@ -100,7 +100,7 @@ ul {
 
 .btn-primary {
   background: var(--color-accent);
-  color: var(--color-primary);
+  color: var(--color-white);
 }
 
 .btn-primary:hover {
@@ -116,7 +116,7 @@ ul {
 
 .btn-outline:hover {
   background: var(--color-accent);
-  color: var(--color-primary);
+  color: var(--color-white);
 }
 
 .btn-full {
@@ -154,6 +154,8 @@ ul {
   font-size: 1.6rem;
   color: var(--color-white);
   font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .logo span {
@@ -243,7 +245,7 @@ ul {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(26, 26, 46, 0.7), rgba(26, 26, 46, 0.5));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.45));
 }
 
 .hero-content {
@@ -328,7 +330,7 @@ ul {
   bottom: 15px;
   right: 15px;
   background: var(--color-accent);
-  color: var(--color-primary);
+  color: var(--color-white);
   padding: 8px 16px;
   border-radius: 4px;
   font-weight: 700;
@@ -473,7 +475,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(26, 26, 46, 0.4);
+  background: rgba(0, 0, 0, 0.5);
   color: var(--color-white);
   font-size: 1.5rem;
   opacity: 0;
@@ -810,7 +812,7 @@ ul {
 
 .social-links a:hover {
   background: var(--color-accent);
-  color: var(--color-primary);
+  color: var(--color-white);
 }
 
 .contact-map iframe {
@@ -885,7 +887,7 @@ ul {
 .newsletter-form button {
   padding: 12px 18px;
   background: var(--color-accent);
-  color: var(--color-primary);
+  color: var(--color-white);
   border: none;
   border-radius: 0 4px 4px 0;
   cursor: pointer;
