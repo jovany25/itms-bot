@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le Grand Lumière - Hôtel de Luxe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="logo">Le Grand <span>Lumière</span></a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#rooms">Chambres</a></li>
+        <li><a href="#amenities">Services</a></li>
+        <li><a href="#gallery">Galerie</a></li>
+        <li><a href="#booking">Réservation</a></li>
+        <li><a href="#testimonials">Avis</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-subtitle">Bienvenue au</p>
+      <h1>Le Grand Lumière</h1>
+      <p class="hero-tagline">Où le luxe rencontre la sérénité</p>
+      <a href="#booking" class="btn btn-primary">Réserver votre séjour</a>
+    </div>
+  </section>
+
+  <!-- Rooms -->
+  <section id="rooms">
+    <div class="container">
+      <div class="section-title">
+        <h2>Nos Chambres</h2>
+        <span class="title-line"></span>
+        <p>Des espaces raffinés pour un séjour inoubliable</p>
+      </div>
+      <div class="rooms-grid">
+        <div class="room-card fade-in">
+          <div class="room-image">
+            <img src="https://picsum.photos/600/400?random=10" alt="Chambre Deluxe">
+            <span class="room-price">180€ <small>/nuit</small></span>
+          </div>
+          <div class="room-info">
+            <h3>Chambre Deluxe</h3>
+            <p>Élégante chambre de 35m² avec vue sur le jardin, lit king-size et salle de bain en marbre.</p>
+            <ul class="room-features">
+              <li><i class="fas fa-wifi"></i> Wi-Fi</li>
+              <li><i class="fas fa-tv"></i> Smart TV</li>
+              <li><i class="fas fa-snowflake"></i> Climatisation</li>
+            </ul>
+            <a href="#booking" class="btn btn-outline">Réserver</a>
+          </div>
+        </div>
+        <div class="room-card fade-in">
+          <div class="room-image">
+            <img src="https://picsum.photos/600/400?random=11" alt="Suite Executive">
+            <span class="room-price">320€ <small>/nuit</small></span>
+          </div>
+          <div class="room-info">
+            <h3>Suite Executive</h3>
+            <p>Suite spacieuse de 55m² avec salon séparé, balcon privé et vue panoramique sur la ville.</p>
+            <ul class="room-features">
+              <li><i class="fas fa-wifi"></i> Wi-Fi</li>
+              <li><i class="fas fa-bath"></i> Jacuzzi</li>
+              <li><i class="fas fa-concierge-bell"></i> Butler</li>
+            </ul>
+            <a href="#booking" class="btn btn-outline">Réserver</a>
+          </div>
+        </div>
+        <div class="room-card fade-in">
+          <div class="room-image">
+            <img src="https://picsum.photos/600/400?random=12" alt="Suite Présidentielle">
+            <span class="room-price">580€ <small>/nuit</small></span>
+          </div>
+          <div class="room-info">
+            <h3>Suite Présidentielle</h3>
+            <p>L'excellence absolue : 120m², terrasse privée, majordome dédié et vue imprenable.</p>
+            <ul class="room-features">
+              <li><i class="fas fa-wifi"></i> Wi-Fi</li>
+              <li><i class="fas fa-champagne-glasses"></i> Minibar</li>
+              <li><i class="fas fa-spa"></i> Spa privé</li>
+            </ul>
+            <a href="#booking" class="btn btn-outline">Réserver</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Amenities -->
+  <section id="amenities">
+    <div class="container">
+      <div class="section-title">
+        <h2>Nos Services</h2>
+        <span class="title-line"></span>
+        <p>Une expérience hôtelière d'exception</p>
+      </div>
+      <div class="amenities-grid">
+        <div class="amenity-card fade-in">
+          <i class="fas fa-spa"></i>
+          <h3>Spa & Bien-être</h3>
+          <p>Soins du corps et de l'esprit dans un espace de détente absolu.</p>
+        </div>
+        <div class="amenity-card fade-in">
+          <i class="fas fa-water-ladder"></i>
+          <h3>Piscine à Débordement</h3>
+          <p>Une piscine infinity avec vue panoramique sur la côte.</p>
+        </div>
+        <div class="amenity-card fade-in">
+          <i class="fas fa-utensils"></i>
+          <h3>Restaurant Gastronomique</h3>
+          <p>Cuisine étoilée mêlant saveurs locales et créativité.</p>
+        </div>
+        <div class="amenity-card fade-in">
+          <i class="fas fa-dumbbell"></i>
+          <h3>Centre de Fitness</h3>
+          <p>Équipements dernière génération et coach personnel.</p>
+        </div>
+        <div class="amenity-card fade-in">
+          <i class="fas fa-bell-concierge"></i>
+          <h3>Conciergerie 24h/24</h3>
+          <p>Un service sur-mesure pour répondre à toutes vos envies.</p>
+        </div>
+        <div class="amenity-card fade-in">
+          <i class="fas fa-martini-glass-citrus"></i>
+          <h3>Bar Rooftop</h3>
+          <p>Cocktails signatures et ambiance lounge sous les étoiles.</p>
+        </div>
+        <div class="amenity-card fade-in">
+          <i class="fas fa-square-parking"></i>
+          <h3>Voiturier</h3>
+          <p>Service de voiturier et parking sécurisé pour votre tranquillité.</p>
+        </div>
+        <div class="amenity-card fade-in">
+          <i class="fas fa-wifi"></i>
+          <h3>Wi-Fi Haut Débit</h3>
+          <p>Connexion fibre optique gratuite dans tout l'établissement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery">
+    <div class="container">
+      <div class="section-title">
+        <h2>Notre Galerie</h2>
+        <span class="title-line"></span>
+        <p>Découvrez l'univers du Grand Lumière</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item fade-in" data-size="tall">
+          <img src="https://picsum.photos/600/800?random=20" alt="Hall d'entrée">
+        </div>
+        <div class="gallery-item fade-in">
+          <img src="https://picsum.photos/600/400?random=21" alt="Restaurant">
+        </div>
+        <div class="gallery-item fade-in">
+          <img src="https://picsum.photos/600/400?random=22" alt="Piscine">
+        </div>
+        <div class="gallery-item fade-in" data-size="wide">
+          <img src="https://picsum.photos/800/400?random=23" alt="Vue panoramique">
+        </div>
+        <div class="gallery-item fade-in">
+          <img src="https://picsum.photos/600/400?random=24" alt="Spa">
+        </div>
+        <div class="gallery-item fade-in" data-size="tall">
+          <img src="https://picsum.photos/600/800?random=25" alt="Suite">
+        </div>
+        <div class="gallery-item fade-in">
+          <img src="https://picsum.photos/600/400?random=26" alt="Bar rooftop">
+        </div>
+        <div class="gallery-item fade-in">
+          <img src="https://picsum.photos/600/400?random=27" alt="Jardin">
+        </div>
+      </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox-close" aria-label="Fermer">&times;</button>
+      <img src="" alt="Image agrandie" id="lightbox-img">
+    </div>
+  </section>
+
+  <!-- Booking -->
+  <section id="booking">
+    <div class="container">
+      <div class="section-title">
+        <h2>Réservation</h2>
+        <span class="title-line"></span>
+        <p>Réservez votre expérience de luxe</p>
+      </div>
+      <div class="booking-wrapper">
+        <div class="booking-image">
+          <img src="https://picsum.photos/800/900?random=30" alt="Intérieur de l'hôtel">
+        </div>
+        <form class="booking-form" id="booking-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nom complet</label>
+              <input type="text" id="name" name="name" required placeholder="Jean Dupont">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required placeholder="jean@email.com">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Téléphone</label>
+              <input type="tel" id="phone" name="phone" placeholder="+33 6 12 34 56 78">
+            </div>
+            <div class="form-group">
+              <label for="guests">Nombre de personnes</label>
+              <input type="number" id="guests" name="guests" min="1" max="10" value="2">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="checkin">Date d'arrivée</label>
+              <input type="date" id="checkin" name="checkin" required>
+            </div>
+            <div class="form-group">
+              <label for="checkout">Date de départ</label>
+              <input type="date" id="checkout" name="checkout" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="room-type">Type de chambre</label>
+            <select id="room-type" name="room-type" required>
+              <option value="">Sélectionnez une chambre</option>
+              <option value="deluxe">Chambre Deluxe - 180€/nuit</option>
+              <option value="executive">Suite Executive - 320€/nuit</option>
+              <option value="presidential">Suite Présidentielle - 580€/nuit</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="requests">Demandes spéciales</label>
+            <textarea id="requests" name="requests" rows="4" placeholder="Lit bébé, régime alimentaire, anniversaire..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Confirmer la réservation</button>
+        </form>
+      </div>
+      <!-- Success message -->
+      <div class="booking-success" id="booking-success">
+        <i class="fas fa-check-circle"></i>
+        <h3>Réservation confirmée !</h3>
+        <p>Merci pour votre réservation. Un email de confirmation vous sera envoyé sous peu.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="section-title">
+        <h2>Avis de nos Clients</h2>
+        <span class="title-line"></span>
+        <p>Ce que disent nos hôtes</p>
+      </div>
+      <div class="testimonial-carousel">
+        <button class="carousel-btn prev" id="prev-btn" aria-label="Précédent">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="testimonial-slide" id="testimonial-slide">
+          <i class="fas fa-quote-left quote-icon"></i>
+          <p class="testimonial-text" id="testimonial-text"></p>
+          <div class="testimonial-author">
+            <img src="" alt="" id="testimonial-avatar" class="testimonial-avatar">
+            <div>
+              <h4 id="testimonial-name"></h4>
+              <p id="testimonial-location"></p>
+            </div>
+          </div>
+          <div class="testimonial-stars" id="testimonial-stars"></div>
+        </div>
+        <button class="carousel-btn next" id="next-btn" aria-label="Suivant">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+      <div class="carousel-dots" id="carousel-dots"></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2>Contact</h2>
+        <span class="title-line"></span>
+        <p>Nous sommes à votre disposition</p>
+      </div>
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-location-dot"></i>
+            <div>
+              <h4>Adresse</h4>
+              <p>42 Avenue des Champs-Élysées<br>75008 Paris, France</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h4>Téléphone</h4>
+              <p>+33 1 42 56 78 90</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h4>Email</h4>
+              <p>reservation@grandlumiere.fr</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-clock"></i>
+            <div>
+              <h4>Réception</h4>
+              <p>24h/24 - 7j/7</p>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+          </div>
+        </div>
+        <div class="contact-map">
+          <iframe
+            src="https://www.openstreetmap.org/export/embed.html?bbox=2.2922%2C48.8632%2C2.3122%2C48.8762&layer=mapnik&marker=48.8698%2C2.3072"
+            width="100%"
+            height="400"
+            style="border:0; border-radius: 12px;"
+            allowfullscreen
+            loading="lazy"
+            title="Emplacement de l'hôtel">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h3>Le Grand <span>Lumière</span></h3>
+        <p>Un hôtel d'exception au coeur de Paris, alliant tradition française et confort moderne depuis 1923.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Liens Rapides</h4>
+        <ul>
+          <li><a href="#rooms">Nos Chambres</a></li>
+          <li><a href="#amenities">Services</a></li>
+          <li><a href="#gallery">Galerie</a></li>
+          <li><a href="#booking">Réservation</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <p>Recevez nos offres exclusives et actualités.</p>
+        <form class="newsletter-form" id="newsletter-form">
+          <input type="email" placeholder="Votre email" required>
+          <button type="submit"><i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Le Grand Lumière. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
