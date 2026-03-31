@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grille Tarifaire — Prodiges Hôtel ★★★</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav id="navbar" class="scrolled">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <div><div class="logo-stars">★★★</div><div class="logo-text">Prodiges Hôtel</div></div>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="hebergement.html">Hébergement</a></li>
+        <li><a href="restauration.html">Restauration</a></li>
+        <li><a href="salles.html">Salles & Événements</a></li>
+        <li><a href="nos-atouts.html">Nos Atouts</a></li>
+        <li><a href="tarifs.html" class="active">Tarifs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <h1>Grille Tarifaire</h1>
+    <span class="accent-line"></span>
+    <p>Tous nos tarifs en un coup d'œil</p>
+    <div class="breadcrumb"><a href="index.html">Accueil</a><span>/</span><span>Tarifs</span></div>
+  </div>
+
+  <section class="section-padding bg-white">
+    <div class="container">
+
+      <!-- Tabs navigation -->
+      <div class="tabs-nav">
+        <button class="tab-btn active" data-tab="tab-hebergement">Hébergement</button>
+        <button class="tab-btn" data-tab="tab-conferences">Salles de Conférence</button>
+        <button class="tab-btn" data-tab="tab-banquet">Banquet & Esplanade</button>
+        <button class="tab-btn" data-tab="tab-piscine">Piscine & Natation</button>
+        <button class="tab-btn" data-tab="tab-sport">Salle de Sport</button>
+      </div>
+
+      <!-- Tab 1: Hébergement -->
+      <div class="tab-content active" id="tab-hebergement">
+        <table class="price-table">
+          <thead>
+            <tr><th>Type de chambre</th><th>Prix (FCFA HT / nuit)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Chambre ECO</td><td class="price-value">25 000</td></tr>
+            <tr><td>Chambre VIP <span class="card-badge badge-gold" style="position:static;font-size:0.7rem;padding:3px 8px;margin-left:8px;">Best Value</span></td><td class="price-value">40 000</td></tr>
+            <tr><td>Chambre Gold</td><td class="price-value">55 000</td></tr>
+            <tr><td>Chambre Lits jumeaux</td><td class="price-value">75 000</td></tr>
+            <tr><td>Chambre Wide ultra spacieuse</td><td class="price-value">95 000</td></tr>
+            <tr><td>Suite Ministérielle</td><td class="price-value">113 000</td></tr>
+            <tr><td>Suite Présidentielle <span class="card-badge badge-premium" style="position:static;font-size:0.7rem;padding:3px 8px;margin-left:8px;">Premium</span></td><td class="text-accent" style="font-weight:700;">170 000</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Tab 2: Salles de conférence -->
+      <div class="tab-content" id="tab-conferences">
+        <table class="price-table">
+          <thead>
+            <tr><th>Salle</th><th>Capacité</th><th>Standard</th><th>Gold</th><th>Superstar</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Le Mirifique</strong></td><td>600 pl.</td><td class="price-value">200 000</td><td class="price-value">250 000</td><td class="price-value">300 000</td></tr>
+            <tr><td><strong>Le Sage</strong></td><td>100 pl.</td><td class="price-value">200 000</td><td class="price-value">250 000</td><td class="price-value">300 000</td></tr>
+            <tr><td><strong>L'Espoir</strong></td><td>70 pl.</td><td class="price-value">150 000</td><td class="price-value">200 000</td><td class="price-value">250 000</td></tr>
+            <tr><td><strong>La Formule</strong></td><td>30 pl.</td><td class="price-value">75 000</td><td class="price-value">100 000</td><td class="price-value">125 000</td></tr>
+            <tr><td><strong>La Grâce</strong></td><td>20 pl.</td><td class="price-value">75 000</td><td class="price-value">100 000</td><td class="price-value">125 000</td></tr>
+            <tr><td><strong>L'Olympe (VIP)</strong></td><td>15 pl.</td><td>—</td><td>—</td><td class="text-accent" style="font-weight:700;">300 000 (Full Option)</td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:20px;">
+          <p style="font-size:0.9rem;color:var(--color-text-muted);"><strong>Standard</strong> : Salle climatisée + Wifi + Chaises + Tables</p>
+          <p style="font-size:0.9rem;color:var(--color-text-muted);"><strong>Gold</strong> : Standard + Vidéoprojecteur</p>
+          <p style="font-size:0.9rem;color:var(--color-text-muted);"><strong>Superstar</strong> : Gold + Pupitre + Sonorisation + Chevalet</p>
+        </div>
+      </div>
+
+      <!-- Tab 3: Banquet & Esplanade -->
+      <div class="tab-content" id="tab-banquet">
+        <table class="price-table">
+          <thead>
+            <tr><th>Espace</th><th>Capacité</th><th>Tarif (FCFA HT)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Salle Le Mirifique</strong> (banquet)</td><td>600 places</td><td class="text-accent" style="font-weight:700;">À partir de 1 000 000</td></tr>
+            <tr><td><strong>Esplanade 1</strong></td><td>500 m²</td><td class="text-accent" style="font-weight:700;">À partir de 700 000</td></tr>
+            <tr><td><strong>Esplanade 2</strong></td><td>1 000 m²</td><td class="text-accent" style="font-weight:700;">À partir de 700 000</td></tr>
+          </tbody>
+        </table>
+        <p style="margin-top:16px;font-size:0.9rem;color:var(--color-text-muted);">Usage : cérémonies de promotion, mariages, galas, cérémonies en plein air.</p>
+      </div>
+
+      <!-- Tab 4: Piscine & Natation -->
+      <div class="tab-content" id="tab-piscine">
+        <table class="price-table">
+          <thead>
+            <tr><th>Service</th><th>Tarif (FCFA)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Accès piscine — Enfant</td><td class="price-value">3 000</td></tr>
+            <tr><td>Accès piscine — Adulte</td><td class="price-value">5 000</td></tr>
+            <tr><td>Cours de natation enfants (3 séances/semaine)</td><td class="price-value">15 000 /mois</td></tr>
+            <tr><td>Cours de natation adultes (3 séances/semaine)</td><td class="price-value">25 000 /mois</td></tr>
+            <tr><td>Cours intensifs</td><td class="price-value">50 000 /mois</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Tab 5: Salle de sport -->
+      <div class="tab-content" id="tab-sport">
+        <table class="price-table">
+          <thead>
+            <tr><th>Formule</th><th>Détails</th><th>Tarif (FCFA/mois)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Maître</strong></td><td>20 séances + coach personnel</td><td class="price-value">25 000</td></tr>
+            <tr><td><strong>Gladiateur</strong></td><td>Accès illimité + coach</td><td class="price-value">35 000</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="price-note">* Tous les prix sont en FCFA — Hors Taxes</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-padding bg-primary text-center">
+    <div class="container">
+      <h2 style="font-family:var(--font-heading);font-size:2rem;color:#fff;margin-bottom:12px;">Besoin d'un devis personnalisé ?</h2>
+      <p style="color:rgba(255,255,255,0.7);margin-bottom:24px;">Notre équipe est à votre disposition pour toute demande spéciale.</p>
+      <a href="contact.html" class="btn btn-primary">Nous contacter</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h3>Prodiges Hôtel</h3>
+        <div class="footer-stars">★ ★ ★</div>
+        <p>Un complexe hôtelier trois étoiles au coeur de Yaoundé, alliant luxe, beauté et service VIP depuis 2014.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Liens Rapides</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="hebergement.html">Hébergement</a></li>
+          <li><a href="restauration.html">Restauration</a></li>
+          <li><a href="salles.html">Salles</a></li>
+          <li><a href="tarifs.html">Tarifs</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item"><i class="fas fa-location-dot"></i><span>NKOLAFAMBA, Route de MFOU, Yaoundé</span></div>
+        <div class="footer-contact-item"><i class="fas fa-phone"></i><span>+237 697-73-10-10</span></div>
+        <div class="footer-contact-item"><i class="fas fa-phone"></i><span>+237 651-68-68-68</span></div>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>info@prodigeshotel.com</span></div>
+      </div>
+      <div class="footer-col">
+        <h4>Horaires</h4>
+        <p>Réception ouverte<br><strong>24h/24 — 7j/7</strong></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container"><p>&copy; 2026 Prodiges Hôtel — Tous droits réservés</p><span>RCCM/RC/MFOU/A/2014/035</span></div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restauration — Prodiges Hôtel ★★★</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav id="navbar" class="scrolled">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <div><div class="logo-stars">★★★</div><div class="logo-text">Prodiges Hôtel</div></div>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="hebergement.html">Hébergement</a></li>
+        <li><a href="restauration.html" class="active">Restauration</a></li>
+        <li><a href="salles.html">Salles & Événements</a></li>
+        <li><a href="nos-atouts.html">Nos Atouts</a></li>
+        <li><a href="tarifs.html">Tarifs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <h1>Restauration</h1>
+    <span class="accent-line"></span>
+    <p>Deux restaurants, une même passion pour l'excellence culinaire</p>
+    <div class="breadcrumb"><a href="index.html">Accueil</a><span>/</span><span>Restauration</span></div>
+  </div>
+
+  <!-- Restaurant La Plage -->
+  <section id="la-plage" class="section-padding bg-white">
+    <div class="container">
+      <div class="restaurant-block fade-in">
+        <div class="restaurant-img">
+          <img src="https://picsum.photos/700/500?random=70" alt="Restaurant La Plage">
+        </div>
+        <div class="restaurant-info">
+          <h3>Restaurant La Plage</h3>
+          <span class="capacity"><i class="fas fa-users"></i> 100 places — Extérieur</span>
+          <p>Pour les exhibitionnistes — profitez du soleil équatorial en prenant votre déjeuner en plein air, au bord de la piscine, tout en respirant le parfum des roses dans la quiétude.</p>
+          <p style="font-style:normal;color:var(--color-text-muted);">Ambiance en plein air avec jardin fleuri, bord de piscine et vue sur les espaces verts de l'hôtel. L'endroit idéal pour un déjeuner décontracté ou un dîner sous les étoiles.</p>
+          <a href="contact.html" class="btn btn-bordeaux btn-sm" style="margin-top:12px;">Réserver une table</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Restaurant Le Magnificat -->
+  <section id="le-magnificat" class="section-padding bg-surface">
+    <div class="container">
+      <div class="restaurant-block reverse fade-in">
+        <div class="restaurant-img">
+          <img src="https://picsum.photos/700/500?random=71" alt="Restaurant Le Magnificat">
+        </div>
+        <div class="restaurant-info">
+          <h3>Restaurant Le Magnificat</h3>
+          <span class="capacity"><i class="fas fa-users"></i> 50 places — Intérieur</span>
+          <p>Pour les plus discrets — déjeunez dans un cadre cosy et chic avec votre âme sœur ou vos collaborateurs dans notre restaurant intérieur, à la croisée des cultures africaines.</p>
+          <p style="font-style:normal;color:var(--color-text-muted);">Décor africain raffiné mêlant tradition et modernité. Un cadre intimiste parfait pour les dîners romantiques ou les repas d'affaires.</p>
+          <a href="contact.html" class="btn btn-bordeaux btn-sm" style="margin-top:12px;">Réserver une table</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Carte -->
+  <section class="section-padding bg-white">
+    <div class="container text-center">
+      <div class="section-header">
+        <h2>Notre Carte</h2>
+        <span class="accent-line"></span>
+        <p>Une cuisine riche et variée pour tous les palais</p>
+      </div>
+      <div class="amenity-grid" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="amenity-card fade-in">
+          <div class="amenity-icon"><i class="fas fa-drumstick-bite"></i></div>
+          <h3>Saveurs Camerounaises</h3>
+          <p>Ndolé, poulet DG, eru, poisson braisé et autres délices nationaux préparés avec passion.</p>
+        </div>
+        <div class="amenity-card fade-in">
+          <div class="amenity-icon"><i class="fas fa-globe"></i></div>
+          <h3>Mets Internationaux</h3>
+          <p>Cuisine française, italienne, asiatique… Un tour du monde des saveurs dans votre assiette.</p>
+        </div>
+        <div class="amenity-card fade-in">
+          <div class="amenity-icon"><i class="fas fa-wine-glass"></i></div>
+          <h3>Vins & Spiritueux</h3>
+          <p>Une carte de vins et spiritueux sélectionnés avec soin pour accompagner chaque plat.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h3>Prodiges Hôtel</h3>
+        <div class="footer-stars">★ ★ ★</div>
+        <p>Un complexe hôtelier trois étoiles au coeur de Yaoundé, alliant luxe, beauté et service VIP depuis 2014.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Liens Rapides</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="hebergement.html">Hébergement</a></li>
+          <li><a href="restauration.html">Restauration</a></li>
+          <li><a href="salles.html">Salles</a></li>
+          <li><a href="tarifs.html">Tarifs</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item"><i class="fas fa-location-dot"></i><span>NKOLAFAMBA, Route de MFOU, Yaoundé</span></div>
+        <div class="footer-contact-item"><i class="fas fa-phone"></i><span>+237 697-73-10-10</span></div>
+        <div class="footer-contact-item"><i class="fas fa-phone"></i><span>+237 651-68-68-68</span></div>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>info@prodigeshotel.com</span></div>
+      </div>
+      <div class="footer-col">
+        <h4>Horaires</h4>
+        <p>Réception ouverte<br><strong>24h/24 — 7j/7</strong></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Prodiges Hôtel — Tous droits réservés</p>
+        <span>RCCM/RC/MFOU/A/2014/035</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

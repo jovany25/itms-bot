@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Prodiges Hôtel ★★★</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav id="navbar" class="scrolled">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <div><div class="logo-stars">★★★</div><div class="logo-text">Prodiges Hôtel</div></div>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="hebergement.html">Hébergement</a></li>
+        <li><a href="restauration.html">Restauration</a></li>
+        <li><a href="salles.html">Salles & Événements</a></li>
+        <li><a href="nos-atouts.html">Nos Atouts</a></li>
+        <li><a href="tarifs.html">Tarifs</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <h1>Contactez-nous</h1>
+    <span class="accent-line"></span>
+    <p>Notre équipe est à votre disposition 24h/24, 7j/7</p>
+    <div class="breadcrumb"><a href="index.html">Accueil</a><span>/</span><span>Contact</span></div>
+  </div>
+
+  <section class="section-padding bg-white">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Info -->
+        <div class="contact-info-list">
+          <div class="contact-item fade-in">
+            <div class="icon-circle"><i class="fas fa-location-dot"></i></div>
+            <div>
+              <h4>Adresse</h4>
+              <p>NKOLAFAMBA, Route de MFOU<br>À 100 m du Collège Père Monti<br>Yaoundé, Cameroun</p>
+            </div>
+          </div>
+          <div class="contact-item fade-in">
+            <div class="icon-circle"><i class="fas fa-phone"></i></div>
+            <div>
+              <h4>Téléphone</h4>
+              <p>+237 697-73-10-10<br>+237 651-68-68-68</p>
+            </div>
+          </div>
+          <div class="contact-item fade-in">
+            <div class="icon-circle"><i class="fas fa-envelope"></i></div>
+            <div>
+              <h4>Email</h4>
+              <p>info@prodigeshotel.com</p>
+            </div>
+          </div>
+          <div class="contact-item fade-in">
+            <div class="icon-circle"><i class="fas fa-globe"></i></div>
+            <div>
+              <h4>Site web</h4>
+              <p>www.prodigeshotel.com</p>
+            </div>
+          </div>
+          <div class="contact-item fade-in">
+            <div class="icon-circle"><i class="fas fa-clock"></i></div>
+            <div>
+              <h4>Service client</h4>
+              <p>Disponible <strong>24h/24 — 7j/7</strong></p>
+            </div>
+          </div>
+
+          <div class="social-links fade-in">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <!-- Formulaire -->
+        <form class="contact-form fade-in" id="contact-form">
+          <h3 style="font-family:var(--font-heading);font-size:1.5rem;color:var(--color-primary);margin-bottom:20px;">Envoyez-nous un message</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nom complet</label>
+              <input type="text" id="name" name="name" required placeholder="Jean Kamga">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required placeholder="jean@email.com">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Téléphone</label>
+              <input type="tel" id="phone" name="phone" placeholder="+237 6XX-XX-XX-XX">
+            </div>
+            <div class="form-group">
+              <label for="service">Type de service</label>
+              <select id="service" name="service" required>
+                <option value="">Sélectionnez un service</option>
+                <option value="hebergement">Hébergement</option>
+                <option value="restauration">Restauration</option>
+                <option value="salle">Salle de conférence</option>
+                <option value="evenement">Événement / Banquet</option>
+                <option value="autre">Autre</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Décrivez votre demande..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-bordeaux btn-full">Envoyer</button>
+        </form>
+
+      </div>
+
+      <!-- Map -->
+      <div class="contact-map fade-in">
+        <iframe
+          src="https://www.openstreetmap.org/export/embed.html?bbox=11.5200%2C3.8400%2C11.5600%2C3.8700&layer=mapnik&marker=3.8550%2C11.5400"
+          width="100%"
+          height="400"
+          allowfullscreen
+          loading="lazy"
+          title="Emplacement Prodiges Hôtel — Yaoundé">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h3>Prodiges Hôtel</h3>
+        <div class="footer-stars">★ ★ ★</div>
+        <p>Un complexe hôtelier trois étoiles au coeur de Yaoundé, alliant luxe, beauté et service VIP depuis 2014.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Liens Rapides</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="hebergement.html">Hébergement</a></li>
+          <li><a href="restauration.html">Restauration</a></li>
+          <li><a href="salles.html">Salles</a></li>
+          <li><a href="tarifs.html">Tarifs</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item"><i class="fas fa-location-dot"></i><span>NKOLAFAMBA, Route de MFOU, Yaoundé</span></div>
+        <div class="footer-contact-item"><i class="fas fa-phone"></i><span>+237 697-73-10-10</span></div>
+        <div class="footer-contact-item"><i class="fas fa-phone"></i><span>+237 651-68-68-68</span></div>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>info@prodigeshotel.com</span></div>
+      </div>
+      <div class="footer-col">
+        <h4>Horaires</h4>
+        <p>Réception ouverte<br><strong>24h/24 — 7j/7</strong></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container"><p>&copy; 2026 Prodiges Hôtel — Tous droits réservés</p><span>RCCM/RC/MFOU/A/2014/035</span></div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
