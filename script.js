@@ -114,6 +114,125 @@ if (contactForm) {
 }
 
 // ===========================
+// Reservation Modal
+// ===========================
+const reserveBtn = document.getElementById('floating-reserve-btn');
+const modalOverlay = document.getElementById('reservation-modal');
+const modalClose = document.getElementById('modal-close');
+const modalCancel = document.getElementById('modal-cancel');
+const reservationForm = document.getElementById('reservation-form');
+
+function openModal() {
+  if (modalOverlay) {
+    modalOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeModal() {
+  if (modalOverlay) {
+    modalOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+}
+
+if (reserveBtn) reserveBtn.addEventListener('click', openModal);
+if (modalClose) modalClose.addEventListener('click', closeModal);
+if (modalCancel) modalCancel.addEventListener('click', closeModal);
+
+if (modalOverlay) {
+  modalOverlay.addEventListener('click', (e) => {
+    if (e.target === modalOverlay) closeModal();
+  });
+}
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && modalOverlay && modalOverlay.classList.contains('active')) {
+    closeModal();
+  }
+});
+
+if (reservationForm) {
+  const checkin = reservationForm.querySelector('#res-checkin');
+  const checkout = reservationForm.querySelector('#res-checkout');
+  const today = new Date().toISOString().split('T')[0];
+  if (checkin) checkin.min = today;
+  if (checkout) checkout.min = today;
+  if (checkin) {
+    checkin.addEventListener('change', () => {
+      if (checkout) {
+        checkout.min = checkin.value;
+        if (checkout.value && checkout.value <= checkin.value) checkout.value = '';
+      }
+    });
+  }
+
+  reservationForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Merci ! Votre demande de réservation a bien été enregistrée. Notre équipe vous contactera sous peu.');
+    reservationForm.reset();
+    closeModal();
+  });
+}
+
+// ===========================
+// Organigramme (render from team-data.js)
+// ===========================
+function renderOrgChart() {
+  const container = document.getElementById('org-chart');
+  if (!container || typeof TEAM_DATA === 'undefined') return;
+
+  function createCard(member, isDirector) {
+    const card = document.createElement('div');
+    card.className = 'org-card' + (isDirector ? ' director' : '') + ' fade-in';
+
+    const avatarContent = member.photo
+      ? `<img src="${member.photo}" alt="${member.name}">`
+      : member.initials;
+
+    card.innerHTML = `
+      <div class="org-avatar">${avatarContent}</div>
+      <div class="org-name">${member.name}</div>
+      <div class="org-role">${member.role}</div>
+    `;
+    return card;
+  }
+
+  // Level 1
+  const level1 = document.createElement('div');
+  level1.className = 'org-level';
+  TEAM_DATA.level1.forEach(m => level1.appendChild(createCard(m, true)));
+  container.appendChild(level1);
+
+  // Connector
+  const c1 = document.createElement('div');
+  c1.className = 'org-connector';
+  container.appendChild(c1);
+
+  // Level 2
+  const level2 = document.createElement('div');
+  level2.className = 'org-level';
+  TEAM_DATA.level2.forEach(m => level2.appendChild(createCard(m, false)));
+  container.appendChild(level2);
+
+  // Connector
+  const c2 = document.createElement('div');
+  c2.className = 'org-connector';
+  container.appendChild(c2);
+
+  // Level 3
+  const level3 = document.createElement('div');
+  level3.className = 'org-level';
+  TEAM_DATA.level3.forEach(m => level3.appendChild(createCard(m, false)));
+  container.appendChild(level3);
+
+  // Re-observe new fade-in elements
+  container.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
+}
+
+renderOrgChart();
+
+// ===========================
 // Smooth scroll
 // ===========================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

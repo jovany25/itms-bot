@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prodiges Hôtel ★★★ — Yaoundé, Cameroun</title>
+  <title>Notre Hôtel — Prodiges Hôtel ★★★</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -25,8 +25,8 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="nav-links">
-        <li><a href="index.html" class="active">Accueil</a></li>
-        <li><a href="notre-hotel.html">Notre Hôtel</a></li>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="notre-hotel.html" class="active">Notre Hôtel</a></li>
         <li><a href="hebergement.html">Hébergement</a></li>
         <li><a href="restauration.html">Restauration</a></li>
         <li><a href="salles.html">Salles & Événements</a></li>
@@ -37,7 +37,7 @@
     </div>
   </nav>
 
-  <!-- Hero (conservé tel quel) -->
+  <!-- Hero -->
   <section id="hero">
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
@@ -46,101 +46,145 @@
       <h1>Prodiges Hôtel</h1>
       <p class="hero-slogan">"Votre bien-être, Notre raison d'être !"</p>
       <div class="hero-buttons">
-        <a href="#" class="btn btn-primary" onclick="event.preventDefault();document.getElementById('floating-reserve-btn').click();">Réserver maintenant</a>
+        <a href="contact.html" class="btn btn-primary">Réserver maintenant</a>
         <a href="nos-atouts.html" class="btn btn-outline">Découvrir nos services</a>
       </div>
     </div>
   </section>
 
-  <!-- SECTION A — Blog / Actualités -->
+  <!-- Stats Bar -->
+  <div class="stats-bar">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <h3 data-count="63">0</h3>
+          <p>Chambres de luxe</p>
+        </div>
+        <div class="stat-item">
+          <h3 data-count="6">0</h3>
+          <p>Suites</p>
+        </div>
+        <div class="stat-item">
+          <h3 data-count="2">0</h3>
+          <p>Restaurants</p>
+        </div>
+        <div class="stat-item">
+          <h3 data-count="6">0</h3>
+          <p>Salles de réunion</p>
+        </div>
+        <div class="stat-item">
+          <h3 data-count="5000" data-suffix=" m²">0</h3>
+          <p>De superficie</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Présentation -->
   <section class="section-padding bg-white">
     <div class="container">
-      <div class="section-header">
-        <h2>Actualités & Blog</h2>
-        <span class="accent-line"></span>
-        <p>Restez informés de nos dernières nouvelles et offres spéciales</p>
-      </div>
-
-      <div class="blog-grid">
-        <!-- Article 1 -->
-        <article class="blog-card fade-in">
-          <div class="blog-card-img">
-            <img src="https://picsum.photos/600/340?random=90" alt="Ouverture Spa">
-            <span class="blog-badge">Actualité</span>
-          </div>
-          <div class="blog-card-body">
-            <div class="blog-date"><i class="fas fa-calendar-alt"></i> 10 mars 2026</div>
-            <h3>Ouverture de notre nouveau Spa Sublime Glamour Royale</h3>
-            <p>Nous sommes heureux de vous annoncer l'ouverture officielle de notre espace bien-être. Un lieu dédié à la détente et à la beauté au coeur de Prodiges Hôtel.</p>
-            <a href="#" class="blog-link">Lire la suite <i class="fas fa-arrow-right"></i></a>
-          </div>
-        </article>
-
-        <!-- Article 2 -->
-        <article class="blog-card fade-in">
-          <div class="blog-card-img">
-            <img src="https://picsum.photos/600/340?random=91" alt="Offre VIP">
-            <span class="blog-badge">Offre</span>
-          </div>
-          <div class="blog-card-body">
-            <div class="blog-date"><i class="fas fa-calendar-alt"></i> 20 mars 2026</div>
-            <h3>Offre spéciale : -20% sur les chambres VIP ce mois-ci</h3>
-            <p>Profitez de notre offre exclusive pour tout séjour réservé avant le 30 avril 2026. Les chambres VIP à prix exceptionnel, avec tous les services inclus.</p>
-            <a href="#" class="blog-link">Lire la suite <i class="fas fa-arrow-right"></i></a>
-          </div>
-        </article>
-
-        <!-- Article 3 -->
-        <article class="blog-card fade-in">
-          <div class="blog-card-img">
-            <img src="https://picsum.photos/600/340?random=92" alt="Forum Économique">
-            <span class="blog-badge">Événement</span>
-          </div>
-          <div class="blog-card-body">
-            <div class="blog-date"><i class="fas fa-calendar-alt"></i> 28 mars 2026</div>
-            <h3>Prodiges Hôtel accueille le Forum Économique de Yaoundé 2026</h3>
-            <p>Notre salle Le Mirifique a eu l'honneur d'accueillir les décideurs économiques du Cameroun et de la sous-région lors de cet événement majeur.</p>
-            <a href="#" class="blog-link">Lire la suite <i class="fas fa-arrow-right"></i></a>
-          </div>
-        </article>
-      </div>
-
-      <div class="text-center" style="margin-top:10px;">
-        <a href="#" class="btn btn-bordeaux" style="border-color:var(--color-primary);">Voir tous les articles</a>
+      <div class="intro-grid fade-in">
+        <div class="intro-img">
+          <img src="https://picsum.photos/700/500?random=51" alt="Vue de Prodiges Hôtel">
+        </div>
+        <div class="intro-text">
+          <h2>Bienvenue à Prodiges Hôtel</h2>
+          <p class="slogan">"Votre bien-être, Notre raison d'être !"</p>
+          <p>Prodiges Hôtel est un complexe hôtelier trois étoiles situé dans la localité de NKOLAFAMBA, sur la route de MFOU, à 100 mètres du collège Père Monti. Créé en 2014, Prodiges Hôtel a pour ambition d'offrir à ses clients un service haut de gamme à des prix hautement concurrentiels.</p>
+          <p>À 7 km de la Poste Centrale de Yaoundé, loin du vacarme du centre-ville, Prodiges Hôtel met à votre disposition un cadre propre, chic, moderne et sécurisé alliant parfaitement luxe, beauté, hygiène et service VIP.</p>
+          <a href="hebergement.html" class="btn btn-bordeaux btn-sm">Découvrir nos chambres</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Video Section -->
+  <!-- Aperçu Chambres -->
   <section class="section-padding bg-surface">
     <div class="container">
       <div class="section-header">
-        <h2>Découvrez Prodiges Hôtel en vidéo</h2>
+        <h2>Nos Chambres & Suites</h2>
         <span class="accent-line"></span>
+        <p>63 chambres de luxe et 6 suites dans un design ultra moderne</p>
       </div>
-      <div class="video-wrapper fade-in">
-        <iframe
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-          title="Vidéo Prodiges Hôtel"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-          loading="lazy">
-        </iframe>
+      <div class="rooms-grid">
+        <div class="card fade-in">
+          <div class="card-image">
+            <img src="https://picsum.photos/600/400?random=52" alt="Chambre VIP">
+            <span class="card-badge badge-gold">Best Value</span>
+            <span class="card-price">40 000 <small>FCFA/nuit</small></span>
+          </div>
+          <div class="card-body">
+            <h3>Chambre VIP</h3>
+            <p>Confort et élégance pour un séjour mémorable au coeur de Yaoundé.</p>
+            <a href="hebergement.html" class="btn btn-bordeaux btn-sm">Voir détails</a>
+          </div>
+        </div>
+        <div class="card fade-in">
+          <div class="card-image">
+            <img src="https://picsum.photos/600/400?random=53" alt="Chambre Gold">
+            <span class="card-price">55 000 <small>FCFA/nuit</small></span>
+          </div>
+          <div class="card-body">
+            <h3>Chambre Gold</h3>
+            <p>Un cadre raffiné avec des finitions haut de gamme et vue panoramique.</p>
+            <a href="hebergement.html" class="btn btn-bordeaux btn-sm">Voir détails</a>
+          </div>
+        </div>
+        <div class="card fade-in">
+          <div class="card-image">
+            <img src="https://picsum.photos/600/400?random=54" alt="Suite Présidentielle">
+            <span class="card-badge badge-premium">Premium</span>
+            <span class="card-price">170 000 <small>FCFA/nuit</small></span>
+          </div>
+          <div class="card-body">
+            <h3>Suite Présidentielle</h3>
+            <p>L'excellence absolue : espace, luxe et service dédié.</p>
+            <a href="hebergement.html" class="btn btn-bordeaux btn-sm">Voir détails</a>
+          </div>
+        </div>
       </div>
-      <p class="video-caption">Plongez dans l'univers de Prodiges Hôtel — luxe, confort et hospitalité camerounaise</p>
     </div>
   </section>
 
-  <!-- SECTION B — Organigramme / Équipe Direction -->
+  <!-- Aperçu Services -->
   <section class="section-padding bg-white">
     <div class="container">
       <div class="section-header">
-        <h2>Notre Équipe de Direction</h2>
+        <h2>Nos Atouts</h2>
         <span class="accent-line"></span>
-        <p>Des professionnels dévoués à votre service</p>
+        <p>Tout pour votre confort et votre plaisir</p>
       </div>
-      <div class="org-chart" id="org-chart">
-        <!-- Rendu dynamiquement par script.js depuis team-data.js -->
+      <div class="amenity-grid">
+        <div class="amenity-card fade-in">
+          <div class="amenity-icon"><i class="fas fa-water-ladder"></i></div>
+          <h3>Piscine</h3>
+          <p>Piscines enfants et adultes pour se détendre sous le soleil équatorial.</p>
+        </div>
+        <div class="amenity-card fade-in">
+          <div class="amenity-icon"><i class="fas fa-utensils"></i></div>
+          <h3>2 Restaurants</h3>
+          <p>Cuisine camerounaise et internationale dans deux cadres uniques.</p>
+        </div>
+        <div class="amenity-card fade-in">
+          <div class="amenity-icon"><i class="fas fa-dumbbell"></i></div>
+          <h3>Salle de Sport</h3>
+          <p>Équipements dernière génération avec coach personnel.</p>
+        </div>
+        <div class="amenity-card fade-in">
+          <div class="amenity-icon"><i class="fas fa-spa"></i></div>
+          <h3>Spa & Hammam</h3>
+          <p>Espace beauté "Sublime Glamour Royale" pour votre bien-être.</p>
+        </div>
+        <div class="amenity-card fade-in">
+          <div class="amenity-icon"><i class="fas fa-people-roof"></i></div>
+          <h3>Salles de conférence</h3>
+          <p>6 salles modulables pour tous vos événements professionnels.</p>
+        </div>
+        <div class="amenity-card fade-in">
+          <div class="amenity-icon"><i class="fas fa-wifi"></i></div>
+          <h3>Internet Gratuit</h3>
+          <p>Wifi haut débit dans tous les espaces de l'hôtel.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -151,7 +195,7 @@
       <h2 style="font-family:var(--font-heading);font-size:2.4rem;color:#fff;margin-bottom:12px;">Prêt à vivre l'expérience Prodiges ?</h2>
       <p class="script-text" style="font-size:1.6rem;margin-bottom:30px;">"Votre bien-être, Notre raison d'être !"</p>
       <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-        <a href="#" class="btn btn-primary" onclick="event.preventDefault();document.getElementById('floating-reserve-btn').click();">Réserver maintenant</a>
+        <a href="contact.html" class="btn btn-primary">Réserver maintenant</a>
         <a href="tarifs.html" class="btn btn-outline">Consulter les tarifs</a>
       </div>
     </div>
@@ -201,6 +245,7 @@
       </div>
     </div>
   </footer>
+
 
   <!-- Bouton Flottant Réserver -->
   <button class="floating-reserve" id="floating-reserve-btn" aria-label="Réserver maintenant">
@@ -256,7 +301,6 @@
     </div>
   </div>
 
-  <script src="team-data.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

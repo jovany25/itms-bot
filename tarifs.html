@@ -15,16 +15,22 @@
   <nav id="navbar" class="scrolled">
     <div class="container nav-container">
       <a href="index.html" class="logo">
-        <div><div class="logo-stars">★★★</div><div class="logo-text">Prodiges Hôtel</div></div>
+        <div>
+          <div class="logo-stars">★★★</div>
+          <div class="logo-text">Prodiges Hôtel</div>
+        </div>
       </a>
-      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Accueil</a></li>
+        <li><a href="notre-hotel.html">Notre Hôtel</a></li>
         <li><a href="hebergement.html">Hébergement</a></li>
         <li><a href="restauration.html">Restauration</a></li>
         <li><a href="salles.html">Salles & Événements</a></li>
         <li><a href="nos-atouts.html">Nos Atouts</a></li>
-        <li><a href="tarifs.html" class="active">Tarifs</a></li>
+        <li><a href="tarifs.html" class="active">Grille Tarifaire</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
@@ -163,10 +169,11 @@
         <h4>Liens Rapides</h4>
         <ul>
           <li><a href="index.html">Accueil</a></li>
+          <li><a href="notre-hotel.html">Notre Hôtel</a></li>
           <li><a href="hebergement.html">Hébergement</a></li>
           <li><a href="restauration.html">Restauration</a></li>
           <li><a href="salles.html">Salles</a></li>
-          <li><a href="tarifs.html">Tarifs</a></li>
+          <li><a href="tarifs.html">Grille Tarifaire</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
@@ -183,9 +190,67 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="container"><p>&copy; 2026 Prodiges Hôtel — Tous droits réservés</p><span>RCCM/RC/MFOU/A/2014/035</span></div>
+      <div class="container">
+        <p>&copy; 2026 Prodiges Hôtel — Tous droits réservés</p>
+        <span>RCCM/RC/MFOU/A/2014/035</span>
+      </div>
     </div>
   </footer>
+
+
+  <!-- Bouton Flottant Réserver -->
+  <button class="floating-reserve" id="floating-reserve-btn" aria-label="Réserver maintenant">
+    <i class="fas fa-calendar-days"></i>
+    <span>Réserver maintenant</span>
+  </button>
+
+  <!-- Modal Réservation -->
+  <div class="modal-overlay" id="reservation-modal">
+    <div class="modal">
+      <button class="modal-close" id="modal-close" aria-label="Fermer">&times;</button>
+      <h2>Réservation</h2>
+      <p class="modal-subtitle">Remplissez le formulaire ci-dessous et notre équipe vous contactera.</p>
+      <form id="reservation-form">
+        <div class="form-group">
+          <label for="res-name">Nom complet</label>
+          <input type="text" id="res-name" name="name" required placeholder="Jean Kamga">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="res-checkin">Date d'arrivée</label>
+            <input type="date" id="res-checkin" name="checkin" required>
+          </div>
+          <div class="form-group">
+            <label for="res-checkout">Date de départ</label>
+            <input type="date" id="res-checkout" name="checkout" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="res-room">Type de chambre</label>
+            <select id="res-room" name="room" required>
+              <option value="">Sélectionnez</option>
+              <option value="eco">Chambre ECO</option>
+              <option value="vip">Chambre VIP</option>
+              <option value="gold">Chambre Gold</option>
+              <option value="jumeaux">Lits jumeaux</option>
+              <option value="wide">Wide ultra spacieuse</option>
+              <option value="ministerielle">Suite Ministérielle</option>
+              <option value="presidentielle">Suite Présidentielle</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="res-guests">Nombre de personnes</label>
+            <input type="number" id="res-guests" name="guests" min="1" max="10" value="2">
+          </div>
+        </div>
+        <div class="modal-buttons">
+          <button type="submit" class="btn btn-bordeaux">Confirmer la demande</button>
+          <button type="button" class="btn-cancel" id="modal-cancel">Annuler</button>
+        </div>
+      </form>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
