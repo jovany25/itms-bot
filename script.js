@@ -182,51 +182,70 @@ function renderOrgChart() {
   const container = document.getElementById('org-chart');
   if (!container || typeof TEAM_DATA === 'undefined') return;
 
-  function createCard(member, isDirector) {
-    const card = document.createElement('div');
-    card.className = 'org-card' + (isDirector ? ' director' : '') + ' fade-in';
-
-    const avatarContent = member.photo
-      ? `<img src="${member.photo}" alt="${member.name}">`
-      : member.initials;
-
-    card.innerHTML = `
-      <div class="org-avatar">${avatarContent}</div>
-      <div class="org-name">${member.name}</div>
-      <div class="org-role">${member.role}</div>
-    `;
-    return card;
+  // Helper: image with initials fallback
+  function photoHTML(src, alt, className) {
+    return `<img src="${src}" alt="${alt}" class="${className}"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+            <span style="display:none;width:100%;height:100%;align-items:center;justify-content:center;
+                         font-family:var(--font-heading);font-weight:700;
+                         font-size:${className === 'org-photo-pdg' ? '2rem' : '1.4rem'};
+                         color:var(--color-accent);">
+              ${alt.split(' ').map(w => w[0]).join('').slice(0,2)}
+            </span>`;
   }
 
-  // Level 1
-  const level1 = document.createElement('div');
-  level1.className = 'org-level';
-  TEAM_DATA.level1.forEach(m => level1.appendChild(createCard(m, true)));
-  container.appendChild(level1);
+  const pdg = TEAM_DATA.pdg;
 
-  // Connector
-  const c1 = document.createElement('div');
-  c1.className = 'org-connector';
-  container.appendChild(c1);
+  // ---- PDG ----
+  const pdgWrap = document.createElement('div');
+  pdgWrap.className = 'org-pdg-wrap fade-in';
+  pdgWrap.innerHTML = `
+    <div class="org-card-pdg">
+      <div class="org-photo-pdg">
+        ${photoHTML(pdg.photo, pdg.nom, 'org-photo-pdg')}
+      </div>
+      <span class="org-badge-pdg">${pdg.sigle}</span>
+      <div class="org-name-pdg">${pdg.nom}</div>
+      <div class="org-role-pdg">${pdg.fonction}</div>
+    </div>
+  `;
+  container.appendChild(pdgWrap);
 
-  // Level 2
-  const level2 = document.createElement('div');
-  level2.className = 'org-level';
-  TEAM_DATA.level2.forEach(m => level2.appendChild(createCard(m, false)));
-  container.appendChild(level2);
+  // Connecteur vertical
+  const vline = document.createElement('div');
+  vline.className = 'org-vline';
+  container.appendChild(vline);
 
-  // Connector
-  const c2 = document.createElement('div');
-  c2.className = 'org-connector';
-  container.appendChild(c2);
+  // Ligne horizontale
+  const hWrap = document.createElement('div');
+  hWrap.className = 'org-hline-wrap';
+  hWrap.innerHTML = `<div class="org-hline"></div>`;
+  container.appendChild(hWrap);
 
-  // Level 3
-  const level3 = document.createElement('div');
-  level3.className = 'org-level';
-  TEAM_DATA.level3.forEach(m => level3.appendChild(createCard(m, false)));
-  container.appendChild(level3);
+  // ---- Membres ----
+  const membersRow = document.createElement('div');
+  membersRow.className = 'org-members';
 
-  // Re-observe new fade-in elements
+  TEAM_DATA.membres.forEach(m => {
+    const col = document.createElement('div');
+    col.className = 'org-member-col fade-in';
+    col.innerHTML = `
+      <div class="org-member-vline"></div>
+      <div class="org-card-member">
+        <div class="org-photo-member">
+          ${photoHTML(m.photo, m.nom, 'org-photo-member')}
+        </div>
+        <span class="org-badge-member">${m.sigle}</span>
+        <div class="org-name-member">${m.nom}</div>
+        <div class="org-role-member">${m.fonction}</div>
+      </div>
+    `;
+    membersRow.appendChild(col);
+  });
+
+  container.appendChild(membersRow);
+
+  // Re-observe fade-in elements
   container.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
 }
 

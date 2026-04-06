@@ -1270,115 +1270,178 @@ ul { list-style: none; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0;
 }
 
-.org-level {
+/* ---- Niveau 1 : PDG ---- */
+.org-pdg-wrap {
   display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  position: relative;
+  flex-direction: column;
+  align-items: center;
 }
 
-.org-connector {
-  width: 2px;
-  height: 40px;
-  background: var(--color-divider);
-  margin: 0 auto;
-}
-
-.org-connector-h {
-  height: 2px;
-  background: var(--color-divider);
-  margin: 0 auto 0;
-  position: relative;
-}
-
-.org-card {
+.org-card-pdg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 32px 40px;
   background: var(--color-bg);
   border-radius: var(--radius-card);
-  padding: 24px 20px;
-  text-align: center;
-  min-width: 180px;
-  max-width: 200px;
-  box-shadow: var(--shadow-card);
-  border-bottom: 3px solid var(--color-divider);
-  transition: transform var(--transition), box-shadow var(--transition);
-  position: relative;
+  box-shadow: 0 8px 32px rgba(139, 26, 43, 0.14);
 }
 
-.org-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-hover);
-  border-bottom-color: var(--color-accent);
-}
-
-.org-card.director {
-  background: var(--color-primary);
-  color: var(--color-text-light);
-  border-bottom-color: var(--color-accent);
-  min-width: 220px;
-  max-width: 240px;
-  padding: 30px 24px;
-}
-
-.org-card.director .org-role {
-  color: var(--color-accent);
-}
-
-.org-card.director .org-avatar {
-  border-color: var(--color-accent);
-  background: var(--color-primary-dark);
-}
-
-.org-card.director::after {
-  content: '★';
-  position: absolute;
-  top: -10px;
-  right: -6px;
-  color: var(--color-accent);
-  font-size: 1.2rem;
-}
-
-.org-avatar {
-  width: 64px;
-  height: 64px;
+.org-photo-pdg {
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
-  background: rgba(139, 26, 43, 0.12);
-  border: 3px solid var(--color-primary);
+  border: 4px solid var(--color-accent);
+  box-shadow: 0 8px 32px rgba(139, 26, 43, 0.18);
+  overflow: hidden;
+  margin-bottom: 16px;
+  background: rgba(139, 26, 43, 0.10);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 12px;
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: var(--color-primary);
-  overflow: hidden;
 }
 
-.org-card.director .org-avatar {
-  color: var(--color-accent);
-}
-
-.org-avatar img {
+.org-photo-pdg img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.org-name {
-  font-family: var(--font-heading);
+.org-badge-pdg {
+  display: inline-block;
+  background: var(--color-primary);
+  color: var(--color-text-light);
+  border-radius: 20px;
+  padding: 4px 16px;
+  font-size: 0.8rem;
   font-weight: 700;
-  font-size: 0.95rem;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.org-name-pdg {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
   margin-bottom: 4px;
 }
 
-.org-role {
+.org-role-pdg {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
   font-style: italic;
   color: var(--color-accent);
-  font-size: 0.82rem;
+}
+
+/* Connecteur vertical PDG → membres */
+.org-vline {
+  width: 2px;
+  height: 40px;
+  background: var(--color-divider);
+}
+
+/* Ligne horizontale de connexion */
+.org-hline-wrap {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.org-hline {
+  height: 2px;
+  background: var(--color-divider);
+  width: 80%;
+}
+
+/* ---- Niveau 2 : membres ---- */
+.org-members {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.org-member-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.org-member-vline {
+  width: 2px;
+  height: 30px;
+  background: var(--color-divider);
+}
+
+.org-card-member {
+  background: var(--color-bg);
+  border-radius: var(--radius-card);
+  padding: 20px;
+  text-align: center;
+  width: 180px;
+  box-shadow: var(--shadow-card);
+  border-bottom: 3px solid var(--color-accent);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.org-card-member:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.org-photo-member {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid var(--color-primary);
+  overflow: hidden;
+  margin: 0 auto 12px;
+  background: rgba(139, 26, 43, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.org-photo-member img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.org-badge-member {
+  display: inline-block;
+  background: var(--color-accent);
+  color: var(--color-primary-dark);
+  border-radius: 20px;
+  padding: 3px 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.org-name-member {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.org-role-member {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-style: italic;
+  color: var(--color-text-muted);
+  line-height: 1.4;
 }
 
 /* ===========================
@@ -1593,10 +1656,13 @@ ul { list-style: none; }
   .includes-list { grid-template-columns: 1fr; }
   .page-header h1 { font-size: 2.2rem; }
   .blog-grid { grid-template-columns: 1fr; }
-  .org-level { gap: 16px; }
-  .org-card { min-width: 140px; max-width: 160px; padding: 16px 12px; }
-  .org-card.director { min-width: 160px; max-width: 180px; }
-  .org-connector { height: 24px; }
+  .org-hline-wrap, .org-hline, .org-member-vline { display: none; }
+  .org-vline { height: 20px; }
+  .org-members { grid-template-columns: 1fr 1fr; display: grid; gap: 16px; }
+  .org-member-col { display: contents; }
+  .org-card-member { width: 100%; }
+  .org-photo-pdg { width: 120px; height: 120px; }
+  .org-photo-member { width: 90px; height: 90px; }
   .floating-reserve span { display: none; }
   .floating-reserve { padding: 16px; width: 56px; height: 56px; justify-content: center; }
   .floating-reserve i { font-size: 1.3rem; margin: 0; }

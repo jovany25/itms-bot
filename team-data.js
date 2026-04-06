@@ -1,67 +1,47 @@
 // ===========================
 // Team Data — Prodiges Hôtel
-// Modifiez les noms, postes et photos ici.
-// Pour ajouter une vraie photo, remplacez "photo" par l'URL de l'image.
 // ===========================
+// Pour remplacer une photo : copiez le fichier dans public/team/
+// et remplacez le fichier correspondant (même nom).
+// Les photos doivent être au format carré (ex: 400x400px) pour un rendu optimal.
+
 const TEAM_DATA = {
-  level1: [
+  pdg: {
+    nom: "Dr. Michel TANG",
+    fonction: "Président Directeur Général",
+    sigle: "PDG",
+    photo: "public/team/pdg.jpeg"
+  },
+  membres: [
     {
-      name: "M. Nkoulou Jean-Pierre",
-      role: "Directeur Général",
-      initials: "NJ",
-      photo: null
-    }
-  ],
-  level2: [
-    {
-      name: "Mme Atangana Marie",
-      role: "Directeur Adjoint",
-      initials: "AM",
-      photo: null
+      nom: "Marius MBIN",
+      fonction: "Directeur Général",
+      sigle: "DG",
+      photo: "public/team/dg.jpeg"
     },
     {
-      name: "M. Mbarga Paul",
-      role: "Responsable Commercial",
-      initials: "MP",
-      photo: null
+      nom: "Jules SOUME",
+      fonction: "Directeur des Affaires Financières",
+      sigle: "DAF",
+      photo: "public/team/daf.jpeg"
     },
     {
-      name: "Mme Eyinga Claire",
-      role: "Responsable Financier",
-      initials: "EC",
-      photo: null
-    }
-  ],
-  level3: [
-    {
-      name: "M. Ondoua François",
-      role: "Chef de Réception",
-      initials: "OF",
-      photo: null
+      nom: "Francine Laurelle MEIJIEU",
+      fonction: "Directrice des Ressources Humaines",
+      sigle: "DRH",
+      photo: "public/team/drh.jpeg"
     },
     {
-      name: "Mme Ngo Bassa Hélène",
-      role: "Responsable Restauration",
-      initials: "NH",
-      photo: null
+      nom: "Jovany ETONG",
+      fonction: "Conseiller Technique",
+      sigle: "CT",
+      photo: "public/team/ct.jpeg"
     },
     {
-      name: "M. Tchoutang Samuel",
-      role: "Chef Cuisinier",
-      initials: "TS",
-      photo: null
-    },
-    {
-      name: "Mme Fouda Isabelle",
-      role: "Responsable Événements",
-      initials: "FI",
-      photo: null
-    },
-    {
-      name: "M. Essomba David",
-      role: "Responsable Maintenance",
-      initials: "ED",
-      photo: null
+      nom: "Sandra OBON",
+      fonction: "Directrice Marketing",
+      sigle: "DM",
+      photo: "public/team/dm.jpeg"
     }
   ]
 };
