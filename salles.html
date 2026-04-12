@@ -48,7 +48,16 @@
     <div class="container">
       <div class="event-highlight fade-in">
         <div class="event-highlight-img">
-          <img src="https://picsum.photos/800/500?random=80" alt="Salle Le Mirifique">
+          <div class="carousel">
+            <div class="carousel-track">
+              <div class="carousel-slide active"><img src="images/salles/mirifique-1.jpeg" alt="Salle Le Mirifique" onerror="carouselImgError(this)"><div class="carousel-placeholder"><i class="fas fa-camera"></i><span>Photo bientôt disponible</span></div></div>
+              <div class="carousel-slide"><img src="images/salles/mirifique-2.jpeg" alt="Salle Le Mirifique" onerror="carouselImgError(this)"><div class="carousel-placeholder"><i class="fas fa-camera"></i><span>Photo bientôt disponible</span></div></div>
+              <div class="carousel-slide"><img src="images/salles/mirifique-3.jpeg" alt="Salle Le Mirifique" onerror="carouselImgError(this)"><div class="carousel-placeholder"><i class="fas fa-camera"></i><span>Photo bientôt disponible</span></div></div>
+            </div>
+            <button class="carousel-prev" aria-label="Précédent"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-next" aria-label="Suivant"><i class="fas fa-chevron-right"></i></button>
+            <div class="carousel-dots"></div>
+          </div>
         </div>
         <div class="event-highlight-info">
           <span class="tag">600 places</span>
@@ -68,6 +77,17 @@
         <h2>Salles de Conférence</h2>
         <span class="accent-line"></span>
         <p>6 salles modulables pour vos réunions et séminaires</p>
+      </div>
+
+      <div class="carousel fade-in" style="max-width:700px;margin:0 auto 30px;height:320px;border-radius:12px;">
+        <div class="carousel-track">
+          <div class="carousel-slide active"><img src="images/salles/conference-1.jpeg" alt="Salle de conférence" onerror="carouselImgError(this)"><div class="carousel-placeholder"><i class="fas fa-camera"></i><span>Photo bientôt disponible</span></div></div>
+          <div class="carousel-slide"><img src="images/salles/conference-2.jpeg" alt="Salle de conférence" onerror="carouselImgError(this)"><div class="carousel-placeholder"><i class="fas fa-camera"></i><span>Photo bientôt disponible</span></div></div>
+          <div class="carousel-slide"><img src="images/salles/conference-3.jpeg" alt="Salle de conférence" onerror="carouselImgError(this)"><div class="carousel-placeholder"><i class="fas fa-camera"></i><span>Photo bientôt disponible</span></div></div>
+        </div>
+        <button class="carousel-prev" aria-label="Précédent"><i class="fas fa-chevron-left"></i></button>
+        <button class="carousel-next" aria-label="Suivant"><i class="fas fa-chevron-right"></i></button>
+        <div class="carousel-dots"></div>
       </div>
 
       <table class="price-table fade-in">
@@ -169,7 +189,16 @@
       <div class="rooms-grid" style="grid-template-columns: repeat(2, 1fr);">
         <div class="card fade-in">
           <div class="card-image" style="height:260px;">
-            <img src="https://picsum.photos/700/400?random=81" alt="Esplanade 1">
+            <div class="carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide active"><img src="images/salles/esplanade-1.jpeg" alt="Esplanade 1" onerror="carouselImgError(this)"><div class="carousel-placeholder"><i class="fas fa-camera"></i><span>Photo bientôt disponible</span></div></div>
+                <div class="carousel-slide"><img src="images/salles/esplanade-2.jpeg" alt="Esplanade 1" onerror="carouselImgError(this)"><div class="carousel-placeholder"><i class="fas fa-camera"></i><span>Photo bientôt disponible</span></div></div>
+                <div class="carousel-slide"><img src="images/salles/esplanade-3.jpeg" alt="Esplanade 1" onerror="carouselImgError(this)"><div class="carousel-placeholder"><i class="fas fa-camera"></i><span>Photo bientôt disponible</span></div></div>
+              </div>
+              <button class="carousel-prev" aria-label="Précédent"><i class="fas fa-chevron-left"></i></button>
+              <button class="carousel-next" aria-label="Suivant"><i class="fas fa-chevron-right"></i></button>
+              <div class="carousel-dots"></div>
+            </div>
           </div>
           <div class="card-body">
             <h3>Esplanade 1 — 500 m²</h3>
@@ -179,7 +208,16 @@
         </div>
         <div class="card fade-in">
           <div class="card-image" style="height:260px;">
-            <img src="https://picsum.photos/700/400?random=82" alt="Esplanade 2">
+            <div class="carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide active"><img src="images/salles/esplanade-1.jpeg" alt="Esplanade 2" onerror="carouselImgError(this)"><div class="carousel-placeholder"><i class="fas fa-camera"></i><span>Photo bientôt disponible</span></div></div>
+                <div class="carousel-slide"><img src="images/salles/esplanade-2.jpeg" alt="Esplanade 2" onerror="carouselImgError(this)"><div class="carousel-placeholder"><i class="fas fa-camera"></i><span>Photo bientôt disponible</span></div></div>
+                <div class="carousel-slide"><img src="images/salles/esplanade-3.jpeg" alt="Esplanade 2" onerror="carouselImgError(this)"><div class="carousel-placeholder"><i class="fas fa-camera"></i><span>Photo bientôt disponible</span></div></div>
+              </div>
+              <button class="carousel-prev" aria-label="Précédent"><i class="fas fa-chevron-left"></i></button>
+              <button class="carousel-next" aria-label="Suivant"><i class="fas fa-chevron-right"></i></button>
+              <div class="carousel-dots"></div>
+            </div>
           </div>
           <div class="card-body">
             <h3>Esplanade 2 — 1 000 m²</h3>
@@ -292,5 +330,6 @@
   </div>
 
   <script src="script.js"></script>
+  <script src="carousel.js"></script>
 </body>
 </html>

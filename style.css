@@ -321,7 +321,7 @@ ul { list-style: none; }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url('https://picsum.photos/1920/1080?random=50') center/cover no-repeat;
+  background: url('images/hero.jpeg') center/cover no-repeat;
 }
 
 .hero-overlay {
@@ -1677,6 +1677,216 @@ ul { list-style: none; }
   .hero-buttons { flex-direction: column; }
   .stats-grid { grid-template-columns: 1fr 1fr; }
   .stat-item h3 { font-size: 2rem; }
+}
+
+/* ===========================
+   Carousel
+   =========================== */
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.carousel-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.carousel-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.carousel-slide.active {
+  position: relative;
+  opacity: 1;
+  z-index: 1;
+}
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.carousel-placeholder {
+  display: none;
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: linear-gradient(135deg, #8B1A2B 0%, #6B1020 100%);
+  color: #fff;
+}
+.carousel-placeholder i {
+  font-size: 2.4rem;
+  opacity: 0.7;
+}
+.carousel-placeholder span {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+  opacity: 0;
+}
+.carousel:hover .carousel-prev,
+.carousel:hover .carousel-next {
+  opacity: 1;
+}
+.carousel-prev { left: 8px; }
+.carousel-next { right: 8px; }
+.carousel-prev:hover,
+.carousel-next:hover {
+  background: var(--color-accent);
+}
+.carousel-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  gap: 6px;
+}
+.carousel-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.carousel-dot.active {
+  background: var(--color-accent);
+}
+
+/* ===========================
+   Lightbox
+   =========================== */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(0,0,0,0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+.lightbox-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+.lightbox-img {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 12px 48px rgba(0,0,0,0.5);
+}
+.lightbox-close {
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2.4rem;
+  cursor: pointer;
+  z-index: 2;
+  line-height: 1;
+  transition: color 0.3s;
+}
+.lightbox-close:hover { color: var(--color-accent); }
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--color-primary);
+  border: none;
+  color: #fff;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+  z-index: 2;
+}
+.lightbox-prev { left: 20px; }
+.lightbox-next { right: 20px; }
+.lightbox-prev:hover,
+.lightbox-next:hover { background: var(--color-accent); }
+
+/* Atouts gallery grid */
+.atouts-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+.atouts-gallery-item {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+.atouts-gallery-item .carousel {
+  height: 280px;
+  border-radius: 12px 12px 0 0;
+}
+.atouts-gallery-item h3 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  text-align: center;
+  padding: 16px 12px;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .carousel-prev,
+  .carousel-next {
+    opacity: 1;
+    width: 32px;
+    height: 32px;
+  }
+  .lightbox-prev,
+  .lightbox-next {
+    width: 38px;
+    height: 38px;
+  }
+  .atouts-gallery {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

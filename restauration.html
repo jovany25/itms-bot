@@ -48,7 +48,16 @@
     <div class="container">
       <div class="restaurant-block fade-in">
         <div class="restaurant-img">
-          <img src="https://picsum.photos/700/500?random=70" alt="Restaurant La Plage">
+          <div class="carousel">
+            <div class="carousel-track">
+              <div class="carousel-slide active"><img src="images/restauration/plage-1.jpeg" alt="Restaurant La Plage" onerror="carouselImgError(this)"><div class="carousel-placeholder"><i class="fas fa-camera"></i><span>Photo bientôt disponible</span></div></div>
+              <div class="carousel-slide"><img src="images/restauration/plage-2.jpeg" alt="Restaurant La Plage" onerror="carouselImgError(this)"><div class="carousel-placeholder"><i class="fas fa-camera"></i><span>Photo bientôt disponible</span></div></div>
+              <div class="carousel-slide"><img src="images/restauration/plage-3.jpeg" alt="Restaurant La Plage" onerror="carouselImgError(this)"><div class="carousel-placeholder"><i class="fas fa-camera"></i><span>Photo bientôt disponible</span></div></div>
+            </div>
+            <button class="carousel-prev" aria-label="Précédent"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-next" aria-label="Suivant"><i class="fas fa-chevron-right"></i></button>
+            <div class="carousel-dots"></div>
+          </div>
         </div>
         <div class="restaurant-info">
           <h3>Restaurant La Plage</h3>
@@ -66,7 +75,16 @@
     <div class="container">
       <div class="restaurant-block reverse fade-in">
         <div class="restaurant-img">
-          <img src="https://picsum.photos/700/500?random=71" alt="Restaurant Le Magnificat">
+          <div class="carousel">
+            <div class="carousel-track">
+              <div class="carousel-slide active"><img src="images/restauration/magnificat-1.jpeg" alt="Restaurant Le Magnificat" onerror="carouselImgError(this)"><div class="carousel-placeholder"><i class="fas fa-camera"></i><span>Photo bientôt disponible</span></div></div>
+              <div class="carousel-slide"><img src="images/restauration/magnificat-2.jpeg" alt="Restaurant Le Magnificat" onerror="carouselImgError(this)"><div class="carousel-placeholder"><i class="fas fa-camera"></i><span>Photo bientôt disponible</span></div></div>
+              <div class="carousel-slide"><img src="images/restauration/magnificat-3.jpeg" alt="Restaurant Le Magnificat" onerror="carouselImgError(this)"><div class="carousel-placeholder"><i class="fas fa-camera"></i><span>Photo bientôt disponible</span></div></div>
+            </div>
+            <button class="carousel-prev" aria-label="Précédent"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-next" aria-label="Suivant"><i class="fas fa-chevron-right"></i></button>
+            <div class="carousel-dots"></div>
+          </div>
         </div>
         <div class="restaurant-info">
           <h3>Restaurant Le Magnificat</h3>
@@ -208,5 +226,6 @@
   </div>
 
   <script src="script.js"></script>
+  <script src="carousel.js"></script>
 </body>
 </html>
