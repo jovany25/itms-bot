@@ -252,6 +252,29 @@ function renderOrgChart() {
 renderOrgChart();
 
 // ===========================
+// Tour form
+// ===========================
+const tourForm = document.getElementById('tour-form');
+if (tourForm) {
+  const tourDate = tourForm.querySelector('#tour-date');
+  if (tourDate) tourDate.min = new Date().toISOString().split('T')[0];
+
+  tourForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Merci ! Votre demande d\'escapade a bien été enregistrée. Notre équipe vous contactera sous 24h.');
+    tourForm.reset();
+  });
+}
+
+// ===========================
+// Tour stats (reuse counter observer)
+// ===========================
+const tourStatsSection = document.querySelector('.tour-concept-stats');
+if (tourStatsSection && typeof counterObserver !== 'undefined') {
+  counterObserver.observe(tourStatsSection);
+}
+
+// ===========================
 // Smooth scroll
 // ===========================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
