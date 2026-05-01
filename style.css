@@ -397,8 +397,97 @@ ul { list-style: none; }
 }
 
 /* ===========================
-   Page Header (inner pages)
+   Page Hero (inner pages)
    =========================== */
+.page-hero {
+  position: relative;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.page-hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('images/hero.jpeg') center/cover no-repeat;
+}
+
+.page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(139,26,43,0.55);
+}
+
+.page-hero-content {
+  position: relative;
+  text-align: center;
+  padding: 0 24px;
+}
+
+.page-hero-stars {
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: 4px;
+  margin-bottom: 6px;
+}
+
+.page-hero-hotel {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.page-hero-slogan {
+  font-family: var(--font-script);
+  font-size: 1.4rem;
+  color: var(--color-accent);
+  margin-bottom: 20px;
+}
+
+.page-hero-content h1 {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.page-hero .breadcrumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.page-hero .breadcrumb a {
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.page-hero .breadcrumb a:hover {
+  color: var(--color-accent);
+}
+
+.page-hero .breadcrumb .breadcrumb-sep {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.8rem;
+}
+
+.page-hero .breadcrumb .breadcrumb-current {
+  color: rgba(255,255,255,0.8);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+}
+
+/* Legacy page-header fallback */
 .page-header {
   background: var(--color-primary);
   padding: 140px 0 60px;
@@ -1646,6 +1735,9 @@ ul { list-style: none; }
   .hero-slogan { font-size: 1.5rem; }
   .hero-content { margin-left: 0; }
   .hero-overlay { background: rgba(139,26,43,0.75); }
+  .page-hero { height: 350px; }
+  .page-hero-content h1 { font-size: 2.4rem; }
+  .page-hero-slogan { font-size: 1.2rem; }
 
   .section-header h2 { font-size: 2rem; }
   .rooms-grid { grid-template-columns: 1fr; }
@@ -1675,6 +1767,10 @@ ul { list-style: none; }
   .hero-slogan { font-size: 1.2rem; }
   .btn { padding: 12px 24px; font-size: 0.85rem; }
   .hero-buttons { flex-direction: column; }
+  .page-hero { height: 300px; }
+  .page-hero-content h1 { font-size: 1.8rem; }
+  .page-hero-hotel { font-size: 1.3rem; }
+  .page-hero-slogan { font-size: 1.1rem; }
   .stats-grid { grid-template-columns: 1fr 1fr; }
   .stat-item h3 { font-size: 2rem; }
 }
