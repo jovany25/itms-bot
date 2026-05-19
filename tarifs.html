@@ -74,34 +74,48 @@
             <tr><th>Type de chambre</th><th>Prix (FCFA HT / nuit)</th></tr>
           </thead>
           <tbody>
-            <tr><td>Chambre ECO (Eco S)</td><td class="price-value">19 000</td></tr>
-            <tr><td>Chambre ECO (ECO+)</td><td class="price-value">25 000</td></tr>
-            <tr><td>Chambre majestueuse (VIP) <span class="card-badge badge-gold" style="position:static;font-size:0.7rem;padding:3px 8px;margin-left:8px;">Populaire</span></td><td class="price-value">30 000</td></tr>
-            <tr><td>Chambre majestueuse (VIP+)</td><td class="price-value">35 000</td></tr>
-            <tr><td>Chambre PMR *</td><td class="price-value">35 000</td></tr>
-            <tr><td>Chambre ultra spacieuse</td><td class="price-value">40 000</td></tr>
-            <tr><td>Suite Junior</td><td class="price-value">65 000</td></tr>
-            <tr><td>Suite Ministérielle</td><td class="price-value">80 000</td></tr>
-            <tr><td>Suite Présidentielle <span class="card-badge badge-premium" style="position:static;font-size:0.7rem;padding:3px 8px;margin-left:8px;">Premium</span></td><td class="text-accent" style="font-weight:700;">150 000</td></tr>
+            <tr><td>Chambre ECO</td><td class="price-value">À partir de 25 000</td></tr>
+            <tr><td>Chambre VIP <span class="card-badge badge-gold" style="position:static;font-size:0.7rem;padding:3px 8px;margin-left:8px;">Best Value</span></td><td class="price-value">À partir de 40 000</td></tr>
+            <tr><td>Chambre Gold</td><td class="price-value">À partir de 55 000</td></tr>
+            <tr><td>Chambre Lits jumeaux</td><td class="price-value">À partir de 75 000</td></tr>
+            <tr><td>Chambre Wide ultra spacieuse</td><td class="price-value">À partir de 95 000</td></tr>
+            <tr><td>Suite Ministérielle</td><td class="price-value">À partir de 113 000</td></tr>
+            <tr><td>Suite Présidentielle <span class="card-badge badge-premium" style="position:static;font-size:0.7rem;padding:3px 8px;margin-left:8px;">Premium</span></td><td class="text-accent" style="font-weight:700;">À partir de 170 000</td></tr>
           </tbody>
         </table>
-        <p style="margin-top:12px;font-size:0.85rem;color:var(--color-text-muted);font-style:italic;">* Chambre PMR : chambre spécialement aménagée pour les personnes à mobilité réduite</p>
       </div>
 
       <!-- Tab 2: Salles de conférence -->
       <div class="tab-content" id="tab-conferences">
+        <h3 style="font-family:var(--font-heading);font-size:1.3rem;color:var(--color-primary);margin-bottom:16px;">Grandes salles</h3>
         <table class="price-table">
           <thead>
-            <tr><th>Salle</th><th>Tarif (FCFA HT)</th></tr>
+            <tr><th>Salle</th><th>Standard</th><th>Gold</th><th>Superstar</th></tr>
           </thead>
           <tbody>
-            <tr><td><strong>Le Mirifique</strong></td><td class="price-value">300 000</td></tr>
-            <tr><td><strong>Le Sage</strong></td><td class="price-value">250 000</td></tr>
-            <tr><td><strong>Espoir-La Formule</strong></td><td class="price-value">200 000</td></tr>
-            <tr><td><strong>L'Olympe</strong></td><td class="price-value">150 000</td></tr>
-            <tr><td><strong>La Grâce</strong></td><td class="price-value">100 000</td></tr>
+            <tr><td><strong>L'Espoir</strong> (70 pl.)</td><td class="price-value">150 000</td><td class="price-value">200 000</td><td class="price-value">250 000</td></tr>
+            <tr><td><strong>Le Sage</strong> (100 pl.)</td><td class="price-value">200 000</td><td class="price-value">250 000</td><td class="price-value">300 000</td></tr>
+            <tr><td><strong>Le Mirifique</strong> (600 pl.)</td><td class="price-value">200 000</td><td class="price-value">250 000</td><td class="price-value">300 000</td></tr>
           </tbody>
         </table>
+
+        <h3 style="font-family:var(--font-heading);font-size:1.3rem;color:var(--color-primary);margin:28px 0 16px;">Petites salles</h3>
+        <table class="price-table">
+          <thead>
+            <tr><th>Salle</th><th>Standard</th><th>Gold</th><th>Superstar</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>La Grâce</strong> (20 pl.)</td><td class="price-value">75 000</td><td class="price-value">100 000</td><td class="price-value">125 000</td></tr>
+            <tr><td><strong>La Formule</strong> (30 pl.)</td><td class="price-value">100 000</td><td class="price-value">125 000</td><td class="price-value">150 000</td></tr>
+            <tr><td><strong>L'Olympe VIP</strong> (15 pl.)</td><td>—</td><td class="price-value">Full Option</td><td class="text-accent" style="font-weight:700;">300 000</td></tr>
+          </tbody>
+        </table>
+
+        <div style="margin-top:20px;">
+          <p style="font-size:0.9rem;color:var(--color-text-muted);"><strong>Standard</strong> : Salle climatisée + Wifi + Chaises + Tables</p>
+          <p style="font-size:0.9rem;color:var(--color-text-muted);"><strong>Gold</strong> : Standard + Vidéoprojecteur</p>
+          <p style="font-size:0.9rem;color:var(--color-text-muted);"><strong>Superstar</strong> : Gold + Pupitre + Sonorisation + Chevalet</p>
+        </div>
       </div>
 
       <!-- Tab 3: Banquet & Esplanade -->
@@ -273,13 +287,11 @@
             <label for="res-room">Type de chambre</label>
             <select id="res-room" name="room" required>
               <option value="">Sélectionnez</option>
-              <option value="eco-s">Chambre ECO (Eco S)</option>
-              <option value="eco-plus">Chambre ECO (ECO+)</option>
-              <option value="majestueuse-vip">Chambre majestueuse (VIP)</option>
-              <option value="majestueuse-vip-plus">Chambre majestueuse (VIP+)</option>
-              <option value="pmr">Chambre PMR</option>
-              <option value="ultra-spacieuse">Chambre ultra spacieuse</option>
-              <option value="suite-junior">Suite Junior</option>
+              <option value="eco">Chambre ECO</option>
+              <option value="vip">Chambre VIP</option>
+              <option value="gold">Chambre Gold</option>
+              <option value="jumeaux">Chambre Lits jumeaux</option>
+              <option value="wide">Chambre Wide ultra spacieuse</option>
               <option value="ministerielle">Suite Ministérielle</option>
               <option value="presidentielle">Suite Présidentielle</option>
             </select>
