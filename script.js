@@ -13,27 +13,21 @@ if (navbar) {
 // ===========================
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
-const navOverlay = document.getElementById('nav-overlay');
 
 function closeMenu() {
   if (hamburger) hamburger.classList.remove('active');
   if (navLinks) navLinks.classList.remove('active');
-  if (navOverlay) navOverlay.classList.remove('active');
 }
 
 if (hamburger && navLinks) {
   hamburger.addEventListener('click', () => {
-    const isOpen = navLinks.classList.contains('active');
-    if (isOpen) {
+    if (navLinks.classList.contains('active')) {
       closeMenu();
     } else {
       hamburger.classList.add('active');
       navLinks.classList.add('active');
-      if (navOverlay) navOverlay.classList.add('active');
     }
   });
-
-  if (navOverlay) navOverlay.addEventListener('click', closeMenu);
 
   navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', closeMenu);
