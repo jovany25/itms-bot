@@ -114,8 +114,27 @@ const contactForm = document.getElementById('contact-form');
 if (contactForm) {
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    alert('Merci pour votre message ! Notre équipe vous répondra dans les plus brefs délais.');
-    contactForm.reset();
+    const btn = contactForm.querySelector('[type="submit"]');
+    const origText = btn.textContent;
+    btn.textContent = 'Envoi en cours...';
+    btn.disabled = true;
+    fetch(contactForm.action, {
+      method: 'POST',
+      body: new FormData(contactForm),
+      headers: { 'Accept': 'application/json' }
+    }).then(r => {
+      if (r.ok) {
+        contactForm.reset();
+        alert('✅ Merci ! Votre demande a été envoyée avec succès. Notre équipe vous contactera sous 24h.');
+      } else {
+        alert('❌ Une erreur est survenue. Veuillez réessayer ou nous contacter directement au +237 697-73-10-10');
+      }
+    }).catch(() => {
+      alert('❌ Une erreur est survenue. Veuillez réessayer ou nous contacter directement au +237 697-73-10-10');
+    }).finally(() => {
+      btn.textContent = origText;
+      btn.disabled = false;
+    });
   });
 }
 
@@ -175,9 +194,28 @@ if (reservationForm) {
 
   reservationForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    alert('Merci ! Votre demande de réservation a bien été enregistrée. Notre équipe vous contactera sous peu.');
-    reservationForm.reset();
-    closeModal();
+    const btn = reservationForm.querySelector('[type="submit"]');
+    const origText = btn.textContent;
+    btn.textContent = 'Envoi en cours...';
+    btn.disabled = true;
+    fetch(reservationForm.action, {
+      method: 'POST',
+      body: new FormData(reservationForm),
+      headers: { 'Accept': 'application/json' }
+    }).then(r => {
+      if (r.ok) {
+        reservationForm.reset();
+        closeModal();
+        alert('✅ Merci ! Votre demande a été envoyée avec succès. Notre équipe vous contactera sous 24h.');
+      } else {
+        alert('❌ Une erreur est survenue. Veuillez réessayer ou nous contacter directement au +237 697-73-10-10');
+      }
+    }).catch(() => {
+      alert('❌ Une erreur est survenue. Veuillez réessayer ou nous contacter directement au +237 697-73-10-10');
+    }).finally(() => {
+      btn.textContent = origText;
+      btn.disabled = false;
+    });
   });
 }
 
@@ -267,8 +305,27 @@ if (tourForm) {
 
   tourForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    alert('Merci ! Votre demande d\'escapade a bien été enregistrée. Notre équipe vous contactera sous 24h.');
-    tourForm.reset();
+    const btn = tourForm.querySelector('[type="submit"]');
+    const origText = btn.textContent;
+    btn.textContent = 'Envoi en cours...';
+    btn.disabled = true;
+    fetch(tourForm.action, {
+      method: 'POST',
+      body: new FormData(tourForm),
+      headers: { 'Accept': 'application/json' }
+    }).then(r => {
+      if (r.ok) {
+        tourForm.reset();
+        alert('✅ Merci ! Votre demande a été envoyée avec succès. Notre équipe vous contactera sous 24h.');
+      } else {
+        alert('❌ Une erreur est survenue. Veuillez réessayer ou nous contacter directement au +237 697-73-10-10');
+      }
+    }).catch(() => {
+      alert('❌ Une erreur est survenue. Veuillez réessayer ou nous contacter directement au +237 697-73-10-10');
+    }).finally(() => {
+      btn.textContent = origText;
+      btn.disabled = false;
+    });
   });
 }
 

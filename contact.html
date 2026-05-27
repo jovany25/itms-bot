@@ -108,7 +108,8 @@
         </div>
 
         <!-- Formulaire -->
-        <form class="contact-form fade-in" id="contact-form">
+        <form class="contact-form fade-in" id="contact-form" action="https://formspree.io/f/mojbyvvz" method="POST">
+          <input type="hidden" name="_subject" value="Nouvelle demande — Prodiges Hôtel">
           <h3 style="font-family:var(--font-heading);font-size:1.5rem;color:var(--color-primary);margin-bottom:20px;">Envoyez-nous un message</h3>
           <div class="form-row">
             <div class="form-group">
@@ -226,7 +227,8 @@
       <button class="modal-close" id="modal-close" aria-label="Fermer">&times;</button>
       <h2>Réservation</h2>
       <p class="modal-subtitle">Remplissez le formulaire ci-dessous et notre équipe vous contactera.</p>
-      <form id="reservation-form">
+      <form id="reservation-form" action="https://formspree.io/f/mojbyvvz" method="POST">
+          <input type="hidden" name="_subject" value="Nouvelle demande — Prodiges Hôtel">
         <div class="form-group">
           <label for="res-name">Nom complet</label>
           <input type="text" id="res-name" name="name" required placeholder="Jean Kamga">
