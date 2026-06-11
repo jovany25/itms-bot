@@ -284,6 +284,12 @@ ul { list-style: none; }
 }
 
 /* Hamburger */
+.close-menu-btn {
+  display: none;
+}
+.close-menu-li {
+  display: none;
+}
 .hamburger {
   display: none;
   flex-direction: column;
@@ -1707,6 +1713,7 @@ ul { list-style: none; }
   .nav-links.active { right: 0; }
 
   .close-menu-li {
+    display: block !important;
     position: static !important;
     padding: 0 !important;
     border: none !important;
