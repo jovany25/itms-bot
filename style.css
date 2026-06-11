@@ -182,6 +182,7 @@ ul { list-style: none; }
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 40px;
 }
 
 .logo {
@@ -429,7 +430,7 @@ ul { list-style: none; }
 .page-hero-content {
   position: relative;
   text-align: center;
-  padding: 0 24px;
+  padding: 150px 24px 0;
 }
 
 .page-hero-stars {
