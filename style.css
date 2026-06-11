@@ -408,7 +408,7 @@ ul { list-style: none; }
    =========================== */
 .page-hero {
   position: relative;
-  height: 400px;
+  min-height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -430,7 +430,7 @@ ul { list-style: none; }
 .page-hero-content {
   position: relative;
   text-align: center;
-  padding: 150px 24px 0;
+  padding: 150px 24px 40px;
 }
 
 .page-hero-stars {
@@ -452,7 +452,7 @@ ul { list-style: none; }
   font-family: var(--font-script);
   font-size: 1.4rem;
   color: var(--color-accent);
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
 .page-hero-content h1 {
@@ -1778,7 +1778,8 @@ ul { list-style: none; }
   .hero-slogan { font-size: 1.5rem; }
   .hero-content { margin-left: 0; }
   .hero-overlay { background: rgba(139,26,43,0.75); }
-  .page-hero { height: 350px; }
+  .page-hero { min-height: 420px; height: auto; }
+  .page-hero-content { padding-top: 120px; }
   .page-hero-content h1 { font-size: 2.4rem; }
   .page-hero-slogan { font-size: 1.2rem; }
 
@@ -1810,7 +1811,8 @@ ul { list-style: none; }
   .hero-slogan { font-size: 1.2rem; }
   .btn { padding: 12px 24px; font-size: 0.85rem; }
   .hero-buttons { flex-direction: column; }
-  .page-hero { height: 300px; }
+  .page-hero { min-height: 380px; height: auto; }
+  .page-hero-content { padding-top: 110px; }
   .page-hero-content h1 { font-size: 1.8rem; }
   .page-hero-hotel { font-size: 1.3rem; }
   .page-hero-slogan { font-size: 1.1rem; }
